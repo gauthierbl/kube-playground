@@ -1,17 +1,17 @@
 apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
-  name: nginx-pv-test
+  name: nginx-hosted-volume
   labels:
-    app: nginx-pv-test
-    sample: persistent-volumes-example
+    app: nginx-hosted-volume
+    sample: volumes-example
 spec:
   replicas: 1
   template:
     metadata:
       labels:
-        app: nginx-pv-test
-        sample: local-docker-images
+        app: nginx-hosted-volume
+        sample: volumes-example
     spec:
       containers:
       - name: nginx-pv-test
@@ -20,9 +20,9 @@ spec:
         - name: "http-server"
           containerPort: 80
         volumeMounts:
-        - name: mypv
+        - name: volume-example
           mountPath: "/usr/share/nginx/html"
       volumes:
-        - name: mypv
-          persistentVolumeClaim:
-            claimName: pv-claim
+        - name: volume-example
+          hostPath:
+            path: /data/hosted
