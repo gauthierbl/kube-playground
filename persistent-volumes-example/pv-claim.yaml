@@ -2,6 +2,9 @@ kind: PersistentVolumeClaim
 apiVersion: v1
 metadata:
   name: pv-claim
+  labels:
+      app: nginx-pv-test
+      sample: persistent-volumes-example
 spec:
   accessModes:
     - ReadWriteOnce

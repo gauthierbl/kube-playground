@@ -4,6 +4,7 @@ metadata:
   name: sample-app-service
   labels:
     app: local-docker-sample-app
+    sample: local-docker-images
 spec:
   ports:
   - port: 8080
