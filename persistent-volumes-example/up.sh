@@ -1,7 +1,7 @@
 #!/bin/bash
 
 echo
-echo 'run the following on minikube vm:'
+echo 'run the following on minikube vm (minikube ssh):'
 echo 'sudo mkdir /data/hosted'
 echo 'sudo mkdir /data/pv0001'
 echo 'sudo echo 'I love Kubernetes storage! hosted' > /data/hosted/index.html'
