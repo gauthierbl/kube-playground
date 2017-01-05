@@ -2,4 +2,4 @@ This sample show how to use minikube to build local docker images and then run t
 
 If the docker image is not tagged the docker image id won't work with Kubernetes.
 
-the kubectl command for the deployment must include `imagePullPolicy: Never` in the yaml manifest to stop Kubernetes from trying to pull the image from a remote repo.
+The kubectl command for the deployment must include `imagePullPolicy: Never` in the yaml manifest to stop Kubernetes from trying to pull the image from a remote repo.
